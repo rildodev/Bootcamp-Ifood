@@ -1,19 +1,22 @@
-const offset = 0;
-const limit = 10;
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
+function convertPokemonTypesToLi(pokemonTypes) {
+  return pokemonTypes.map(
+    (typeSlot) => `<li class="type">${typeSlot.type.name}</li>`
+  );
+}
 
 function convertPokemonToHtml(pokemon) {
   return `<li class="pokemon">
-  <span class="number">#001</span>
+  <span class="number">#${pokemon.order}</span>
   <span class="name">${pokemon.name}</span>
 
   <div class="detail">
     <ol class="types">
-      <li class="type">grass</li>
-      <li class="type">posion</li>
+      ${convertPokemonTypesToLi(pokemon.types).join("")}
     </ol>
 
-    <img src="assets/images/bubasaurStatic.png" alt="${pokemon.name}" />
+    <img src="${pokemon.sprites.other.dream_world.front_default}" alt="${
+    pokemon.name
+  }" />
   </div>
 </li>`;
 }
@@ -22,5 +25,6 @@ const pokemonList = document.getElementById("pokemonList");
 
 /* requisição da API */
 pokeApi.getPokemons().then((pokemons = []) => {
-  pokemonList.innerHTML += pokemons.map(convertPokemonToHtml).join("");
+  const newHtml = pokemons.map(convertPokemonToHtml).join("");
+  pokemonList.innerHTML = newHtml;
 });
