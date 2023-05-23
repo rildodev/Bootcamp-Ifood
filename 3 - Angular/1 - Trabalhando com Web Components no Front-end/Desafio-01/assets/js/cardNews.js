@@ -3,7 +3,7 @@ class cardNews extends HTMLElement {
     super();
 
     const shadow = this.attachShadow({ mode: "open" });
-    shadow.innerHTML = "<h1>Hello World</h1>";
+    shadow.innerHTML = "<h1>H1</h1>";
   }
 }
 
