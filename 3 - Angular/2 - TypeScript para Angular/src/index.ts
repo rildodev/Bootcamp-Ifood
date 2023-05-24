@@ -51,3 +51,8 @@ let boleto: [string, number, number] = ["Fatura água", 199.0, 42343232];
 dados.map;
 dados.reduce;
 dados.indexOf;
+
+/* Datas */
+
+let aniversario: Date = new Date("2022-12-01 05:00");
+console.log(aniversario.toString());
