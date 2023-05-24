@@ -1,16 +1,8 @@
 {
-  "name": "2---typescript-para-angular",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "npx tsc && node build/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "Scrips": {
+    "start": "npx tsc && node build/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "typescript": "^5.0.4"
   }
 }
