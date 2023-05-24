@@ -1,13 +1,18 @@
-type heroi = {
-  name: string;
-  vulgo: string;
-};
+/*
+Variáveis 
+ */
 
-function printaObjPessoa(pessoa: heroi) {
-  console.log(pessoa);
-}
+//Tipos Primitivos: boolen, number, string
+let ligado: boolean = false;
+let nome: string = "Rildo";
+let number: number = 30;
 
-printaObjPessoa({
-  name: "Bruce Wayne",
-  vulgo: "Batman",
-});
+//Tipos Especiais: null, undefined
+let nulo: null = null;
+
+let indefino: undefined = undefined;
+
+//Tipos Abrangentes: any, void
+let qualquerCoisa: any = "Rildo" || 30 || true || undefined;
+
+let retorn: void;
