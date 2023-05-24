@@ -32,3 +32,9 @@ let meuProduto: ProdutoLoja = {
   price: 2000,
   unidades: 89,
 };
+
+/* Arrays */
+
+let dados: string[] = ["Rildo", "Athos"];
+
+let dados2: Array<string> = ["Rildo", "Athos"];
