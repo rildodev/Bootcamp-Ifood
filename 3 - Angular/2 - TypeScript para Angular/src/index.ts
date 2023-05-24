@@ -41,3 +41,7 @@ let dados2: Array<string> = ["Rildo", "Athos"];
 
 //Array de multi tipos
 let infos: (string | number)[] = ["Rildo", 32];
+
+/* Tuplas */
+
+let boleto: [string, number, number] = ["Fatura água", 199.0, 42343232];
