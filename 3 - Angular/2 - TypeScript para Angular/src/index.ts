@@ -38,3 +38,6 @@ let meuProduto: ProdutoLoja = {
 let dados: string[] = ["Rildo", "Athos"];
 
 let dados2: Array<string> = ["Rildo", "Athos"];
+
+//Array de multi tipos
+let infos: (string | number)[] = ["Rildo", 32];
