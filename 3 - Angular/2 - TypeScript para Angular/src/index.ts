@@ -16,3 +16,19 @@ let indefino: undefined = undefined;
 let qualquerCoisa: any = "Rildo" || 30 || true || undefined;
 
 let retorn: void;
+
+//Objeto sem previsibilidade
+let produto: object = { name: "Iphone", valor: 3400 };
+
+//Objeto shaped
+type ProdutoLoja = {
+  nome: string;
+  price: number;
+  unidades: number;
+};
+
+let meuProduto: ProdutoLoja = {
+  nome: "Iphone",
+  price: 2000,
+  unidades: 89,
+};
