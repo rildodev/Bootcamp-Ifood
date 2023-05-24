@@ -41,7 +41,62 @@ class cardNew extends HTMLElement {
 
     return componentRoot;
   }
-  style() {}
+  style() {
+    const style = document.createElement("style");
+    style.textContent = `
+    
+  .card {
+    width: 80%;
+  
+    box-shadow: -webkit-box-shadow 10px 9px 14px 1px rgba(0,0,0,0.43);
+    -moz-box-shadow: 10px 9px 14px 1px rgba(0,0,0,0.43);
+    box-shadow: 10px 9px 14px 1px rgba(0,0,0,0.43);
+  
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  
+    align-items: center;
+    
+    justify-content: space-between;
+  
+  }
+  
+  .card_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    padding-left: 10px;
+  }
+  
+  .card .card_left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .card_left > h1 {
+    margin: 15px;
+    font-size: 25px;
+  }
+  
+  .card .card_left > span {
+    color: #313131;
+  }
+  
+  .card .card_left  > p {
+    color: #b0a4a4;
+  }
+  
+  .card .card_right > img {
+    width: 70%;
+  }
+  
+    `;
+
+    return style;
+  }
 }
 
 customElements.define("card-new", cardNew);
